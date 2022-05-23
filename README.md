@@ -7,5 +7,5 @@ Intro. to Artificial Intelligence - Final Project
 ## Project Info
 This project's contributors are:
 1. [許涵義 109550200](https://github.com/NicoA07)
-2. 黃承豪 109550203
+2. [黃承豪 109550203](https://github.com/nathanowen06)
 3. [李嘉玲 109550186](https://github.com/cindyyv)
