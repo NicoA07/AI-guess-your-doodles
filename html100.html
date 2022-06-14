@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>doodle classifier</title>
+
+  <!-- CONNECTING JAVASCRIPT -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/addons/p5.dom.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.15.2"></script>
+  <script src="js100.js"></script>
+
+  <!-- INTERNAL CSS -->
+  <style>
+    body {
+      font-family: 'Arial', Courier, monospace;
+      text-align: center;
+    }
+
+    button {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 24pt;
+      margin-right: 10px;
+      border: 1px solid black;
+      background: white;
+    }
+
+    canvas {
+      border: 1px solid black;
+      margin: 20px 20px 0 0;
+    }
+
+    #grid {
+      display: flex;
+      justify-content: start;
+    }
+
+    #res {
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>you doodle! we guess!</h1>
+  <p>A list of object we can guess:<br><br>
+    <b>FRUITS & VEGETABLES</b>: apple, banana, broccoli, cactus, carrot, flower, grapes, pear, peas, pineapple, strawberry, watermelon<br>
+    <b>ANIMALS</b>: ant, bear, bee, bird, butterfly, cat, dog, duck, elephant, fish, panda, pig, sea turtle, snail, spider, tiger<br>
+    <b>OBJECTS</b>: angel, axe, backpack, bandage, baseball bat, basketball, bathub, beard, bicycle, binoculars, birthday cake, book, boomerang, bracelet, brain, bread, bridge, broom, bucket, bus, bush, calender, camera, campfire, candle, car, cell phone, chair, coffee cup, donut, door, dumbbell, ear, envelope, eyeglasses, fork, guitar, hammer, hot air balloon, house, ice cream, key, knife, ladder, lantern, laptop, light bulb, mug, pencil, pizza, rainbow, sailboat, scissors, shoe, snowman, sock, spoon, stethoscope, sun, sword, tree, washing machine, windmill<br>
+    <b>SHAPES</b>: bowtie, circle, diamond, moon, octagon, smiley face, square, star, triangle<br>
+  </p>
+  <!-- <h3>***AI GROUP 15***</h3> -->
+  <p>A doodle classifier trained on 100 classes from <a href="https://quickdraw.withgoogle.com/data" target="_blank">Quickdraw dataset</a></p>
+
+   <!-- CLEAR BUTTON -->
+   <p id="res"></p>
+   <button id="clear">clear</button>
+
+  <!-- CANVAS -->
+  <div id="grid">
+    <div id="canvasContainer"></div>
+  </div>
+  
+  <!-- GUESS PROCESS AND THE GUESSES -->
+  <h2 id="guess"></h2>
+  
+</body>
+
+</html>
